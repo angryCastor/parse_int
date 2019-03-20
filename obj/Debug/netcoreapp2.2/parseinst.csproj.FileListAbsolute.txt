@@ -1,0 +1,11 @@
+/home/ilya/Documents/dotnet/parseinst/bin/Debug/netcoreapp2.2/parseinst.deps.json
+/home/ilya/Documents/dotnet/parseinst/bin/Debug/netcoreapp2.2/parseinst.runtimeconfig.json
+/home/ilya/Documents/dotnet/parseinst/bin/Debug/netcoreapp2.2/parseinst.runtimeconfig.dev.json
+/home/ilya/Documents/dotnet/parseinst/bin/Debug/netcoreapp2.2/parseinst.dll
+/home/ilya/Documents/dotnet/parseinst/bin/Debug/netcoreapp2.2/parseinst.pdb
+/home/ilya/Documents/dotnet/parseinst/obj/Debug/netcoreapp2.2/parseinst.csprojAssemblyReference.cache
+/home/ilya/Documents/dotnet/parseinst/obj/Debug/netcoreapp2.2/parseinst.csproj.CoreCompileInputs.cache
+/home/ilya/Documents/dotnet/parseinst/obj/Debug/netcoreapp2.2/parseinst.AssemblyInfoInputs.cache
+/home/ilya/Documents/dotnet/parseinst/obj/Debug/netcoreapp2.2/parseinst.AssemblyInfo.cs
+/home/ilya/Documents/dotnet/parseinst/obj/Debug/netcoreapp2.2/parseinst.dll
+/home/ilya/Documents/dotnet/parseinst/obj/Debug/netcoreapp2.2/parseinst.pdb
