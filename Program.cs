@@ -23,7 +23,7 @@ namespace parseinst
 
             FillUrls();
             FillJson();
-            FillCountSub();
+            //FillCountSub();
             //WriteToFile();
             Console.WriteLine("Hello World!1");
         }
@@ -71,6 +71,11 @@ namespace parseinst
                         }
                         if(html != null){
                             item.Json = html;
+                            item.CountSub = GetCountSub(item.Json) ?? 0;
+                            item.Json = "";
+                            if(item.CountSub > countFilter){
+                                WriteToFileOneItem(item);
+                            }
                         }
                         else{
                             item.Error = "Parse error";
