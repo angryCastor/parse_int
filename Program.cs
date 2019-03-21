@@ -13,8 +13,10 @@ namespace parseinst
     class Program
     {
         static List<DataInst> dataInstList = new List<DataInst>();
-        static string inputFile = "bez_botov.txt";
+        static string inputFile = "bez_botov_test.txt";
         static string outputFile = "result.txt";
+        static int countFilter = 4500;
+
 
         static void Main(string[] args)
         {
@@ -22,8 +24,8 @@ namespace parseinst
             FillUrls();
             FillJson();
             FillCountSub();
-            WriteToFile();
-            Console.WriteLine("Hello World!");
+            //WriteToFile();
+            Console.WriteLine("Hello World!1");
         }
 
 
@@ -85,6 +87,10 @@ namespace parseinst
                     int? count = GetCountSub(item.Json);
                     item.CountSub = count ?? 0;
                     item.Json = "";
+
+                    if(item.CountSub > countFilter){
+                        WriteToFileOneItem(item);
+                    }
                 }
             }
         }
@@ -112,12 +118,18 @@ namespace parseinst
 
 
         static void WriteToFile(){
-            var list = dataInstList.Where(e => e.CountSub > 4500);
-            using (StreamWriter sw = new StreamWriter(outputFile, false, System.Text.Encoding.Default))
+            var list = dataInstList.Where(e => e.CountSub > countFilter);
+            using (StreamWriter sw = new StreamWriter(outputFile, true, System.Text.Encoding.Default))
             {
                 foreach(var item in list){
                     sw.WriteLine($"{item.Url} || {item.CountSub}");
                 }
+            }
+        }
+
+        static async void WriteToFileOneItem(DataInst item){
+            using (StreamWriter sw = new StreamWriter(outputFile, true, System.Text.Encoding.Default)){
+                await sw.WriteLineAsync($"{item.Url} || {item.CountSub}");
             }
         }
     }
