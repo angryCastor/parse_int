@@ -17,6 +17,7 @@ namespace parseinst
         static string outputFile = "result.txt";
         static int countFilter = 4500;
 
+        static int offset = 31408;
 
         static void Main(string[] args)
         {
@@ -33,8 +34,12 @@ namespace parseinst
             using (StreamReader sr = new StreamReader(inputFile, System.Text.Encoding.Default))
             {
                 string line;
+                int count = 0;
                 while ((line = sr.ReadLine()) != null)
                 {
+                    if(count++ < offset){
+                        continue;
+                    }
                     dataInstList.Add(new DataInst{
                         Url = line
                     });
