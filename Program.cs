@@ -13,7 +13,7 @@ namespace parseinst
     class Program
     {
         static List<DataInst> dataInstList = new List<DataInst>();
-        static string inputFile = "bez_botov_test.txt";
+        static string inputFile = "bez_botov.txt";
         static string outputFile = "result.txt";
         static int countFilter = 4500;
 
